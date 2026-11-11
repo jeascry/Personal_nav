@@ -220,6 +220,17 @@ npm run format
 - 完成配置文件（见[设置配置文件](#设置配置文件)）
 - 提交您的配置文件到仓库
 
+配置站点解锁密码：
+
+1. 进入仓库的 `Settings -> Secrets and variables -> Actions`
+2. 点击 `New repository secret`
+3. 名称填写 `MENAV_SITE_PASSWORD`
+4. 值使用至少 12 个字符的密码，建议使用 16 个以上随机字符
+
+部署工作流会在上传 GitHub Pages 前加密 HTML 和搜索索引。Secret 缺失或密码过短时部署会直接失败，避免意外发布未加密页面。密码不会写入仓库或构建产物，但 GitHub Pages 上的加密文件仍可被下载，因此弱密码可能被离线穷举。
+
+> 如果个人配置直接保存在当前仓库中，请将仓库设为私有；加密部署产物不能保护公开仓库中的 YAML、Markdown、书签文件或 Git 历史。自定义图片等普通静态资源也不会被加密，不应包含敏感信息。
+
 #### 第三步：等待自动部署
 
 - GitHub Actions会自动检测您的更改

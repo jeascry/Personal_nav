@@ -132,6 +132,13 @@ jobs:
       - name: Build site (clean dist + generate)
         run: npm run build
 
+      # GitHub Pages 本身没有登录能力。部署前使用仓库 Secret 对包含个人数据的
+      # HTML 和搜索索引做客户端加密；Secret 缺失时直接失败，避免意外公开部署。
+      - name: Protect private site
+        env:
+          MENAV_SITE_PASSWORD: ${{ secrets.MENAV_SITE_PASSWORD }}
+        run: npm run protect
+
       - name: Check favicon
         run: |
           if [ -f dist/favicon.ico ]; then

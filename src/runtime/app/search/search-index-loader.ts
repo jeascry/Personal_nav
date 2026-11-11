@@ -7,6 +7,15 @@ const { normalizeIndexItem } = require('./index-item.ts') as {
 
 const SEARCH_INDEX_SCHEMA_VERSION = 1;
 const SEARCH_INDEX_URL = './search-index.json';
+const EMBEDDED_SEARCH_INDEX_ID = 'menav-embedded-search-index';
+
+function readEmbeddedSearchIndex(): SearchIndexPayload | null {
+  const element = document.getElementById(EMBEDDED_SEARCH_INDEX_ID);
+  const content = element?.textContent?.trim();
+  if (!content) return null;
+
+  return JSON.parse(content) as SearchIndexPayload;
+}
 
 async function loadBuildSearchIndex(state: RuntimeState): Promise<void> {
   if (state.searchIndex.initialized || state.searchIndex.loading) return;
@@ -14,10 +23,16 @@ async function loadBuildSearchIndex(state: RuntimeState): Promise<void> {
   state.searchIndex.loading = true;
 
   try {
-    const response = await fetch(SEARCH_INDEX_URL, { cache: 'no-cache' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const embeddedPayload = readEmbeddedSearchIndex();
+    let payload: SearchIndexPayload;
 
-    const payload = (await response.json()) as SearchIndexPayload;
+    if (embeddedPayload) {
+      payload = embeddedPayload;
+    } else {
+      const response = await fetch(SEARCH_INDEX_URL, { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      payload = (await response.json()) as SearchIndexPayload;
+    }
     if (payload.schemaVersion !== SEARCH_INDEX_SCHEMA_VERSION || !Array.isArray(payload.items)) {
       throw new Error('search index schema mismatch');
     }
@@ -44,7 +59,9 @@ async function loadBuildSearchIndex(state: RuntimeState): Promise<void> {
 }
 
 module.exports = {
+  EMBEDDED_SEARCH_INDEX_ID,
   SEARCH_INDEX_SCHEMA_VERSION,
   SEARCH_INDEX_URL,
   loadBuildSearchIndex,
+  readEmbeddedSearchIndex,
 };

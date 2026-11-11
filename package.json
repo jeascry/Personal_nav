@@ -25,6 +25,7 @@
     "clean": "node -r ./scripts/register-ts.cjs ./scripts/clean.ts",
     "build:lib": "node -r ./scripts/register-ts.cjs ./scripts/build-lib.ts",
     "build": "node -r ./scripts/register-ts.cjs ./scripts/build.ts",
+    "protect": "node ./scripts/protect-dist.mjs",
     "build:snapshot": "node -r ./scripts/register-ts.cjs ./scripts/build-snapshot.ts",
     "sync": "node -r ./scripts/register-ts.cjs ./scripts/sync.ts",
     "sync-articles": "node -r ./scripts/register-ts.cjs ./scripts/sync-articles.ts",
