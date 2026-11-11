@@ -4,13 +4,14 @@ import type { SearchIndexPayload } from '../../../types/search';
 const { normalizeIndexItem } = require('./index-item.ts') as {
   normalizeIndexItem: (raw: unknown) => RuntimeSearchIndexItem | null;
 };
+const { byId } = require('../../dom/selectors.ts') as typeof import('../../dom/selectors');
 
 const SEARCH_INDEX_SCHEMA_VERSION = 1;
 const SEARCH_INDEX_URL = './search-index.json';
 const EMBEDDED_SEARCH_INDEX_ID = 'menav-embedded-search-index';
 
 function readEmbeddedSearchIndex(): SearchIndexPayload | null {
-  const element = document.getElementById(EMBEDDED_SEARCH_INDEX_ID);
+  const element = byId<HTMLScriptElement>(EMBEDDED_SEARCH_INDEX_ID);
   const content = element?.textContent?.trim();
   if (!content) return null;
 
