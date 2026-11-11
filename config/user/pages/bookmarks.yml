@@ -1,0 +1,268 @@
+# 个人书签导航（由浏览器书签导入后人工整理）
+# 后续可直接在对应 categories[].sites 下追加网站；重新执行 import-bookmarks 会覆盖本文件。
+
+title: 我的书签
+subtitle: 按使用场景整理的个人收藏
+template: bookmarks
+categories:
+  - name: 常用与个人服务
+    icon: fas fa-star
+    sites:
+      - name: Nextcloud 文件
+        url: http://localhost:8080/apps/files/files
+        icon: fas fa-cloud
+      - name: flomo
+        url: https://v.flomoapp.com/mine
+        icon: fas fa-note-sticky
+      - name: 飞书
+        url: https://www.feishu.cn/
+        icon: fas fa-comments
+      - name: Proton Mail
+        url: https://mail.proton.me/
+        icon: fas fa-envelope
+      - name: 坚果云
+        url: https://www.jianguoyun.com/d/home#/
+        icon: fas fa-cloud
+      - name: 蓝奏云
+        url: https://up.woozooo.com/
+        icon: fas fa-cloud-arrow-up
+      - name: 阿里云容器镜像服务
+        url: https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors
+        icon: fas fa-box
+      - name: SiliconFlow 控制台
+        url: https://cloud.siliconflow.cn/me/bills
+        icon: fas fa-microchip
+      - name: AI 杂货铺控制台
+        url: https://xiangzili.xyz/user/openaiCode/console
+        icon: fas fa-sim-card
+      - name: plus gao 的小店
+        url: https://pay.ldxp.cn/shop/KH1QIMLL
+        icon: fas fa-store
+      - name: 赔钱机场
+        url: https://dash.pqjc.site/dashboard
+        icon: fas fa-network-wired
+      - name: 大厅聊天
+        url: http://110.42.107.43:82/
+        icon: fas fa-comments
+      - name: wenpblog 用户中心
+        url: https://www.wenpblog.com/person.html
+        icon: fas fa-user
+
+  - name: AI 与开发
+    icon: fas fa-code
+    sites:
+      - name: Google Gemini
+        url: https://gemini.google.com/app
+        icon: fab fa-google
+      - name: DeepSeek
+        url: https://www.deepseek.com/
+        icon: fas fa-robot
+      - name: 豆包
+        url: https://www.doubao.com/chat/
+        icon: fas fa-robot
+      - name: ChatGPT
+        url: https://chatgpt.com/
+        icon: fas fa-robot
+      - name: Claude
+        url: https://claude.ai/new
+        icon: fas fa-robot
+      - name: Gitee
+        url: https://gitee.com/
+        icon: fab fa-git-alt
+      - name: Cockpit Tools
+        url: https://github.com/jlcodes99/cockpit-tools
+        icon: fab fa-github
+      - name: DeepSeek - Spring 微服务仓库理解
+        url: https://chat.deepseek.com/a/chat/s/7df87688-0362-4ddc-b990-c793ed275fb0
+        icon: fas fa-message
+      - name: 代码随想录
+        url: https://programmercarl.com/
+        icon: fas fa-code
+      - name: LeetCode
+        url: https://leetcode.cn/
+        icon: fas fa-code
+      - name: Linux v86
+        url: https://copy.sh/v86/?profile=linux26
+        icon: fab fa-linux
+      - name: SimpleTex
+        url: https://simpletex.cn/
+        icon: fas fa-square-root-variable
+      - name: MinerU
+        url: https://mineru.net/OpenSourceTools/Extractor
+        icon: fas fa-file-pdf
+      - name: 私有 GitLab
+        url: https://git.namespace.bid:8443/users/sign_in
+        icon: fab fa-gitlab
+      - name: Google Colab
+        url: https://colab.research.google.com/
+        icon: fab fa-google
+
+  - name: 学校与科研
+    icon: fas fa-graduation-cap
+    sites:
+      - name: 重庆邮电大学统一身份认证
+        url: https://ids.cqupt.edu.cn/authserver/login?service=https%3A%2F%2Fi.cqupt.edu.cn%2Flogin
+        icon: fas fa-school
+      - name: 重庆邮电大学图书馆
+        url: https://lib.cqupt.edu.cn/index?page=1
+        icon: fas fa-book
+      - name: 重庆邮电大学邮件系统
+        url: https://mail.cqupt.edu.cn/
+        icon: fas fa-envelope
+      - name: 重庆邮电大学图书分类导航
+        url: https://book.duxiu.com/book.do?go=guideindex
+        icon: fas fa-book-open
+      - name: IEEE Xplore
+        url: https://ieeexplore.ieee.org/Xplore/home.jsp
+        icon: fas fa-microscope
+      - name: 中国知网
+        url: https://www.cnki.net/
+        icon: fas fa-book-open
+      - name: 万方数据
+        url: https://www.wanfangdata.com.cn/index.html
+        icon: fas fa-database
+      - name: Innojoy 专利搜索
+        url: https://www.innojoy.com/search/index.html
+        icon: fas fa-lightbulb
+      - name: 广西数字资源平台
+        url: https://res.gxlib.org.cn/ermsClient/browse.do
+        icon: fas fa-database
+      - name: 《电测与仪表》
+        url: http://www.emijournal.net/dcyyb/ch/index.aspx
+        icon: fas fa-book
+      - name: Measurement Science and Technology
+        url: https://iopscience.iop.org/journal/0957-0233
+        icon: fas fa-book
+      - name: Editorial Manager
+        url: https://www.editorialmanager.com/tim/default2.aspx
+        icon: fas fa-file-pen
+      - name: EasyChair - ICIPNP 2026 Fall
+        url: https://easychair.org/my/conference?conf=icipnp2026fall
+        icon: fas fa-file-pen
+      - name: ORCID
+        url: https://orcid.org/0009-0008-1211-102X
+        icon: fas fa-id-card
+      - name: 专利业务办理系统
+        url: https://cponline.cnipa.gov.cn/
+        icon: fas fa-scale-balanced
+      - name: Overleaf
+        url: https://cn.overleaf.com/project
+        icon: fas fa-file-lines
+      - name: 开放知识图谱
+        url: http://openkg.cn/datasets-type/
+        icon: fas fa-diagram-project
+      - name: CNKI 翻译助手
+        url: https://dict.cnki.net/index
+        icon: fas fa-language
+      - name: Cambridge Dictionary
+        url: https://dictionary.cambridge.org/zhs/
+        icon: fas fa-language
+      - name: IELTS Online Tests
+        url: https://ieltsonlinetests.com/zh-hans/ielts-exam-library
+        icon: fas fa-language
+
+  - name: 阅读与知识
+    icon: fas fa-book-open
+    sites:
+      - name: 微信读书
+        url: https://weread.qq.com/
+        icon: fas fa-book-reader
+      - name: TED
+        url: https://www.ted.com/
+        icon: fas fa-lightbulb
+      - name: 十年之约虫洞
+        url: https://www.foreverblog.cn/go.html
+        icon: fas fa-blog
+      - name: MagazineLib
+        url: https://magazinelib.com/
+        icon: fas fa-newspaper
+      - name: Magazine Reader
+        url: https://mgreader.com/
+        icon: fas fa-newspaper
+      - name: 日光图书馆
+        url: http://www.99885.net/
+        icon: fas fa-book
+      - name: 文献云图书馆
+        url: https://lib.wenx.top/
+        icon: fas fa-book
+      - name: LibTalk
+        url: https://lib-talk.io/
+        icon: fas fa-comments
+      - name: 法学观察室
+        url: https://lawobs.com/
+        icon: fas fa-scale-balanced
+      - name: Z-Library
+        url: https://zh.z-library.sk/
+        icon: fas fa-book
+      - name: 知轩藏书
+        url: https://zxcs.zip/
+        icon: fas fa-book
+
+  - name: 资讯与影音娱乐
+    icon: fas fa-film
+    sites:
+      - name: 今日热榜
+        url: https://tophub.today/
+        icon: fas fa-fire
+      - name: 哔哩哔哩
+        url: https://www.bilibili.com/
+        icon: fas fa-play-circle
+      - name: 微博
+        url: https://weibo.com/u/7922905335/home
+        icon: fab fa-weibo
+      - name: 网易云音乐
+        url: https://music.163.com/
+        icon: fas fa-music
+      - name: HiFiNi 音乐磁场
+        url: https://hifini.net/
+        icon: fas fa-music
+      - name: HiFiNi 备用站
+        url: https://www.hifini2.com/index-new.htm
+        icon: fas fa-music
+      - name: 金牌影院
+        url: https://www.hellorlgzf7sn.com/
+        icon: fas fa-film
+      - name: 围棋链接
+        url: https://www.cczzwq.cn/weiqi_link.php
+        icon: fas fa-chess-board
+      - name: 象棋棋谱大全
+        url: https://chessroad.cn/manuals/complete-collection.html
+        icon: fas fa-chess
+
+  - name: 地图与效率工具
+    icon: fas fa-toolbox
+    sites:
+      - name: 配色表
+        url: https://www.peisebiao.com/
+        icon: fas fa-palette
+      - name: Windy 天气
+        url: https://www.windy.com/?32.413,112.952,9
+        icon: fas fa-wind
+      - name: 地球在线
+        url: https://www.earthol.com/g/
+        icon: fas fa-earth-asia
+      - name: 百度脑图
+        url: https://naotu.baidu.com/
+        icon: fas fa-project-diagram
+      - name: 高德地图
+        url: https://ditu.amap.com/ssr/search
+        icon: fas fa-map-location-dot
+
+  - name: 求职与职业发展
+    icon: fas fa-briefcase
+    sites:
+      - name: 重庆邮电大学就业信息网
+        url: https://job.cqupt.edu.cn/portal/home.html
+        icon: fas fa-briefcase
+      - name: 重庆高校毕业生就业平台
+        url: https://www.cqbys.com/
+        icon: fas fa-briefcase
+      - name: 27 届校招秋招实习内推合集
+        url: https://docs.qq.com/smartsheet/DY3pHYkNvb0ZRSHdi?tab=t0gmEC&viewId=vUQPXH
+        icon: fas fa-table
+      - name: 求职投递记录
+        url: https://docs.qq.com/sheet/DYmF3cmJHVmJzVWN4?tab=BB08J2
+        icon: fas fa-table
+      - name: Python 面试高频考点
+        url: https://blog.csdn.net/qq_37085158/article/details/126821933
+        icon: fab fa-python
